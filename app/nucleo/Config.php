@@ -12,7 +12,7 @@ class Config
                     'author' => 'RIIDE AC',
                     'webauthor' => 'http://riide.org.mx/',
                     'descripcion' => 'RIIDE-TICSA',
-                    'webbase' => 'http://localhost/ticsa/',
+                    'webbase' => 'http://localhost/TICSA-NOM-028-SSA2-2009/',
                     'since' => '2015' 
                     ),
             'sesion' => 
