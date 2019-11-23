@@ -1,2 +1,2 @@
 <?php
-header('Location: http://localhost/ticsa/');
+header('Location: http://localhost/');

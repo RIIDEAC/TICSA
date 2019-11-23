@@ -10,7 +10,7 @@
 		<table align="center" border="0" cellpadding="1" cellspacing="1" style="width:100%">
 			<tbody>
 				<tr>
-					<td rowspan="2" style="text-align:center; vertical-align:middle; width:60px"><img alt="" src="http://localhost/ticsa/app/imagenes/LOGOCENTRO.png" style="height:50px; width:50px" />
+					<td rowspan="2" style="text-align:center; vertical-align:middle; width:60px"><img alt="" src="#" style="height:50px; width:50px" />
 					</td>
 					<td rowspan="2" style="text-align:center; vertical-align:middle; width:60px">&nbsp;</td>
 					<td>
