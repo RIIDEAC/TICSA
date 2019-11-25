@@ -4,6 +4,10 @@
     <form method="POST" action="<?php echo $this->_config->obtener('app/webbase'); ?>RevisarDatosCentro/">
       <div class="form-row">
         <div class="form-group col-md-4">
+          <label for="CEN_DIRECTOR">Nombre del director</label>
+          <input type="text" name="CEN_DIRECTOR" class="form-control" id="CEN_DIRECTOR" placeholder="Nombre completo del director" required>
+        </div>
+        <div class="form-group col-md-4">
           <label for="CEN_NOMBRE">Razón social</label>
           <input type="text" name="CEN_NOMBRE" class="form-control" id="CEN_NOMBRE" placeholder="Nombre">
         </div>

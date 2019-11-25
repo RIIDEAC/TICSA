@@ -192,35 +192,34 @@ class ObtenerFormatosporNING_ID
 					//SI ES VOLUNTARIO O INVOLUNTARIO
 					if($resultados['DAT_NINGRESO_NING']['DATOS'][0]->TII_ID == '3')
 					{
-						$controladorConsentimientoAM = 'VisualizarConsentimientoInformadoInvoluntarioAyudaMutua';
 						$controladorConsentimientoM = 'VisualizarConsentimientoInformadoInvoluntarioMixto';
 					}
 					else
 					{
 						$controladorConsentimientoAM = 'VisualizarConsentimientoInformadoVoluntarioAyudaMutua';
 						$controladorConsentimientoM = 'VisualizarConsentimientoInformadoVoluntarioMixto';
+
+						$resultados['CONSENTIMIENTOAM'] = array(
+							'ID' => 'NING_ID',
+							'NOMBRE' => 'Consentimiento informado - Modelo Ayuda Mutua',
+							'CONTROLADOR' => $controladorConsentimientoAM,
+							'CAMPOS' => array(
+			                    '0' => 'NING_ID',
+			                    '1' => 'FECHA_REGISTRO'
+			                ),
+							'DATOS' => array(
+								(object) array(
+									'NING_ID' => $id,
+									'FECHA_REGISTRO' => $resultados['DAT_NINGRESO_NING']['DATOS'][0]->FECHA_REGISTRO
+								)
+							)
+						);
 					}
 
 					$resultados['CONSENTIMIENTO'] = array(
 						'ID' => 'NING_ID',
 						'NOMBRE' => 'Consentimiento informado - Modelo Mixto',
 						'CONTROLADOR' => $controladorConsentimientoM,
-						'CAMPOS' => array(
-		                    '0' => 'NING_ID',
-		                    '1' => 'FECHA_REGISTRO'
-		                ),
-						'DATOS' => array(
-							(object) array(
-								'NING_ID' => $id,
-								'FECHA_REGISTRO' => $resultados['DAT_NINGRESO_NING']['DATOS'][0]->FECHA_REGISTRO
-							)
-						)
-					);
-
-					$resultados['CONSENTIMIENTOAM'] = array(
-						'ID' => 'NING_ID',
-						'NOMBRE' => 'Consentimiento informado - Modelo Ayuda Mutua',
-						'CONTROLADOR' => $controladorConsentimientoAM,
 						'CAMPOS' => array(
 		                    '0' => 'NING_ID',
 		                    '1' => 'FECHA_REGISTRO'

@@ -11,7 +11,7 @@
 		<table border="1" cellpadding="1" cellspacing="1" style="height:100%; width:100%">
 			<tbody>
 				<tr>
-					<td rowspan="4" style="text-align:center; vertical-align:middle"><img alt="" src="<?php echo $this->_config->obtener('app/webbase'); ?>img/Logotipo.png" style="height:100px; width:100px" /></td>
+					<td rowspan="4" style="text-align:center; vertical-align:middle"><img alt="" src="<?php echo $this->_config->obtener('app/webbase'); ?>img/<?php echo $datos->CENTRO->CEN_ABRE; ?>.png" style="height:100px; width:100px" /></td>
 					<td colspan="1" rowspan="2">
 						<?php echo $datos->CENTRO->CEN_NOMBRE; ?><br />
 						<?php echo $datos->CENTRO->CEN_CALLE. ' ' .$datos->CENTRO->CEN_NUMERO. ', ' .$datos->CENTRO->CEN_COLONIA. ', C.P. ' .$datos->CENTRO->CEN_CP. ' ' .$datos->CENTRO->CEN_CIUDAD. ', ' .$datos->CENTRO->CEN_ENTIDAD; ?><br />

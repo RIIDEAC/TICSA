@@ -41,6 +41,10 @@ return array(
 'maximo' => 255,
 'correo' => true
 ),
+'CEN_DIRECTOR' => array(
+'minimo' => 20,
+'maximo' => 180,
+),
 'TOKEN' => array(
 'tokenvalido' => true
 )
