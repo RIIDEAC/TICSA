@@ -24,7 +24,7 @@
 				</tr>
 				<tr>
 					<td rowspan="2" style="text-align:center">
-					<h3><strong>AVISO DE INTERNAMIENTO</strong></h3>
+					<h3><strong>Notificación al Ministerio Público</strong></h3>
 					</td>
 					<td>Código:</td>
 				</tr>
@@ -33,16 +33,17 @@
 				</tr>
 			</tbody>
 		</table>
-		Expediente n&uacute;mero: <strong><?php echo $datos->FORMATO->NING_ID; ?></strong>&nbsp;
-		Fecha y hora de ingreso: <strong><?php echo $datos->FORMATO->PAC_FINGRESO. ' ' .$datos->FORMATO->PAC_HINGRESO; ?></strong> 
-		Tipo de ingreso:&nbsp;<strong><?php echo $datos->FORMATO->TII_MAY; ?></strong> 
-		Fecha y hora de elaboración: <strong><?php echo $datos->FORMATO->PAC_FINGRESO. ' ' .$datos->FORMATO->PAC_HINGRESO; ?></strong>
 		<hr>
 		<strong>C. AGENTE DEL MINISTERIO PUBLICO</strong><br>
-		PARA SU CONOCIMIENTO:
+		PARA SU CONOCIMIENTO:<br>
+		<strong>AVISO DE INTERNAMIENTO</strong>
 		<p>
-		Con objeto de dar cumplimiento a lo dispuesto por la Norma Oficial Mexicana NOM -028 -SSA2-2009, Para la Prevención, Tratamiento y Control de las Adicciones, me permito informarle los datos relativos al internamiento:
+		Con objeto de dar cumplimiento a lo dispuesto por la Norma Oficial Mexicana NOM-028-SSA2-2009, Para la Prevención, Tratamiento y Control de las Adicciones, me permito informarle los datos relativos al internamiento:
 		</p>
+		Expediente n&uacute;mero: <strong><?php echo $datos->FORMATO->NING_ID; ?></strong>&nbsp;
+		Fecha y hora de ingreso: <strong><?php echo $datos->FORMATO->PAC_FINGRESO. ' ' .$datos->FORMATO->PAC_HINGRESO; ?></strong> 
+		Fecha y hora de elaboración: <strong><?php echo $datos->FORMATO->PAC_FINGRESO. ', ' .$datos->FORMATO->PAC_HINGRESO; ?></strong>
+		<hr>
 		<h3>Datos del paciente:</h3>
 		Nombre completo:&nbsp;<strong><?php echo $datos->FORMATO->PAC_NOMBRE.' '.$datos->FORMATO->PAC_PATERNO.' '.$datos->FORMATO->PAC_MATERNO; ?></strong>&nbsp;
 		Sexo:&nbsp;<strong><?php echo $datos->FORMATO->SEX_MAY; ?></strong> 
