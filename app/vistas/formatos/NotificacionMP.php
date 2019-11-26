@@ -86,7 +86,7 @@
 		<tr>
 			<td style="width:50%">
 				<p><strong><?php echo $datos->FAMILIARES->FAM_NOMBRE.' '.$datos->FAMILIARES->FAM_PATERNO.' '.$datos->FAMILIARES->FAM_MATERNO; ?></strong><br />
-				<strong><?php echo strtoupper($datos->FAMILIARES->PAE_MIN); ?></strong></p>
+				<strong><?php echo strtoupper($datos->FAMILIARES->PAE_MIN); ?> DEL USUARIO(A)</strong></p>
 				<br>
 				<p><strong>Firma: __________________________</strong></p>
 			</td>

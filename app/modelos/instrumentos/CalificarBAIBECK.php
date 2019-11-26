@@ -1,6 +1,7 @@
 <?php
 namespace app\modelos\instrumentos;
 use \app\modelos\sql\{DBGet,DBResultCount,DBResultFirst};
+use stdClass;
 /**
  * 	PARA IMPLEMENTAR INTRODUCIR LA ID DE LA PRUEBA
  	$this->_bai->obtener('BAI_ID');
@@ -25,24 +26,31 @@ class CalificarBAIBECK
 
 	public function obtener($id)
 	{
-		$datos = $this->_db->get(
-			array(
-			'table' => 'DAT_BAIBECK_BAI', 
-			//'limit' => '', 
-			//'orderby' => '', 
-			//'order' => '', 
-			'where' => array('BAI_ID','=',$id),
-			//'and' => array('', '', '')
-			), 
-		array(
-			'*'
-			)
-		);
-
-		if($this->_count->getCount($datos) !==0)
+		if(is_numeric($id))
 		{
-			//SI HAY DATOS
-			return $this->riesgo($this->_result->getFirstObj($datos));	
+			$datos = $this->_db->get(
+				array(
+				'table' => 'DAT_BAIBECK_BAI', 
+				//'limit' => '', 
+				//'orderby' => '', 
+				//'order' => '', 
+				'where' => array('BAI_ID','=',$id),
+				//'and' => array('', '', '')
+				), 
+			array(
+				'*'
+				)
+			);
+
+			if($this->_count->getCount($datos) !==0)
+			{
+				//SI HAY DATOS
+				return $this->riesgo($this->_result->getFirstObj($datos));	
+			}
+		}
+		else if(is_object($id))
+		{
+			return (object) $this->riesgo($id);
 		}
 
 		return false;
@@ -50,42 +58,59 @@ class CalificarBAIBECK
 
 	protected function riesgo($array)
 	{
-		$unset = array(
-			'BAI_ID',
-			'PAC_ID',
-			'NING_ID',
-			'USU_ID',
-			'FECHA_REGISTRO'
+		$campos = array(
+			'HORMIGUEO',
+			'BOCHORNO',
+			'PIERNAS',
+			'RELAJARSE',
+			'PEOR',
+			'MAREO',
+			'OPRESION',
+			'INSEGURIDAD',
+			'TERROR',
+			'NERVIOSISMO',
+			'AHOGO',
+			'MANOS',
+			'CUERPO',
+			'CONTROL',
+			'RESPIRAR',
+			'MORIR',
+			'ASUSTADO',
+			'INDIGESTION',
+			'DEBILIDAD',
+			'RUBORIZARSE',
+			'SUDORACION'
 		);
 
-		$riesgo = [];
-		$riesgo['PUNTOS'] = 0;
+
+		$riesgo = new stdClass;
+		$riesgo->{'PUNTOS'} = 0;
 		
 		foreach ($array as $key => $value)
 		{
-			if(!in_array($key, $unset))
+			if(in_array($key, $campos))
 			{
-				$riesgo['PUNTOS'] = $riesgo['PUNTOS'] + $value;
+				$riesgo->{'PUNTOS'} = $riesgo->{'PUNTOS'} + $value;
 			}
 		}
 
-		if($riesgo['PUNTOS'] >= 0 && $riesgo['PUNTOS'] <= 5)
+		if($riesgo->{'PUNTOS'} >= 0 && $riesgo->{'PUNTOS'} <= 5)
 		{
-			$riesgo['RIESGO'] = 'Mínima';
+			$riesgo->{'RIESGO'} = 'Mínima';
 		}
-		if($riesgo['PUNTOS'] >= 6 && $riesgo['PUNTOS'] <= 15)
+		if($riesgo->{'PUNTOS'} >= 6 && $riesgo->{'PUNTOS'} <= 15)
 		{
-			$riesgo['RIESGO'] = 'Leve';
+			$riesgo->{'RIESGO'} = 'Leve';
 		}
-		if($riesgo['PUNTOS'] >= 16 && $riesgo['PUNTOS'] <= 30)
+		if($riesgo->{'PUNTOS'} >= 16 && $riesgo->{'PUNTOS'} <= 30)
 		{
-			$riesgo['RIESGO'] = 'Moderada';
+			$riesgo->{'RIESGO'} = 'Moderada, es necesario referir a consulta psiquiátrica';
 		}
-		if($riesgo['PUNTOS'] >= 31)
+		if($riesgo->{'PUNTOS'} >= 31)
 		{
-			$riesgo['RIESGO'] = 'Severa';
+			$riesgo->{'RIESGO'} = 'Severa, es necesario referir a consulta psiquiátrica';
 		}
 
-		return $riesgo;
+		return (object) $riesgo;
 	}
 }

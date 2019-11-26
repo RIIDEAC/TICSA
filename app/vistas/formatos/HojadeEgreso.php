@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<script src="<?php echo $this->_config->obtener('app/webbase'); ?>ckeditor/ckeditor.js"></script>
-	<title>Nota de egreso de <?php echo $datos->FORMATO->PAC_NOMBRE.' '.$datos->FORMATO->PAC_PATERNO.' '.$datos->FORMATO->PAC_MATERNO; ?></title>
+	<title>Hoja de egreso de <?php echo $datos->FORMATO->PAC_NOMBRE.' '.$datos->FORMATO->PAC_PATERNO.' '.$datos->FORMATO->PAC_MATERNO; ?></title>
 </header>
 <body>
 	<textarea name="Editor">
@@ -24,7 +24,7 @@
 				</tr>
 				<tr>
 					<td rowspan="2" style="text-align:center">
-					<h3><strong>Nota de egreso</strong></h3>
+					<h3><strong>Hoja de egreso</strong></h3>
 					</td>
 					<td>Código:</td>
 				</tr>
@@ -77,39 +77,8 @@
 			</tbody>
 		</table>
 		<br />
-		<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:100%">
-		<thead>
-			<tr>
-				<th colspan="2" scope="col">Datos cl&iacute;nicos</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><strong>Resumen de evolución y estado actual</strong></td>
-				<td style="height:60px; white-space:nowrap; width:80%">&nbsp;</td>
-			</tr>
-			<tr>
-				<td><strong>Problemas clínicos pendientes:</strong></td>
-				<td style="height:60px; white-space:nowrap; width:80%">&nbsp;</td>
-			</tr>
-			<tr>
-				<td><strong>Diagnóstico final (CIE-10, DSM-V):</strong></td>
-				<td style="height:60px; white-space:nowrap; width:80%">&nbsp;</td>
-			</tr>
-			<tr>
-				<td><strong>Pronóstico:</strong></td>
-				<td style="height:60px; white-space:nowrap; width:80%">&nbsp;</td>
-			</tr>
-			<tr>
-				<td><strong>Indicaciones médicas:</strong></td>
-				<td style="height:60px; white-space:nowrap; width:80%">&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>Médico:<br>
-		Cédula profesional:<br>
-		<p>&nbsp;</p>
-		<p><strong>Firma: __________________________</strong></p></p>	
+		<h3>Descripción del estado general del usuario(a):</h3>
+		<?php echo $datos->FORMATO->PAC_ESTADO; ?>
 	</textarea>
     <script>
             CKEDITOR.replace('Editor');

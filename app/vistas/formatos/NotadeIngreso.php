@@ -48,7 +48,7 @@
 		Estado civil: <strong><?php echo $datos->FORMATO->ESC_MIN; ?></strong> 
 		Escolaridad: <strong><?php echo $datos->FORMATO->ESO_MIN; ?></strong> 
 		Ocupación: <strong><?php echo $datos->FORMATO->OCU_MIN; ?></strong>
-		<hr>
+		<br>
 		<?php if($datos->FORMATO->PAC_SCALLE == '1'){ ?>
 		El paciente vive en situación de calle en 
 		<?php echo $datos->FORMATO->d_tipo_asenta; ?> <strong><?php echo $datos->FORMATO->d_asenta; ?></strong>,
@@ -112,7 +112,10 @@
 			</tr>
 		</tbody>
 	</table>
-	
+	<p>Médico:<br>
+		Cédula profesional:<br>
+		<p>&nbsp;</p>
+		<p><strong>Firma: __________________________</strong></p></p>
 	</textarea>
     <script>
             CKEDITOR.replace('Editor');
