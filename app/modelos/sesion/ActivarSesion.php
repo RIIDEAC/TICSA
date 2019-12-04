@@ -20,6 +20,8 @@ class ActivarSesion
 	{
 		$_SESSION[$this->_config->obtener('sesion/tiempo')] = time();
 		$_SESSION[$this->_config->obtener('sesion/correo')] = $correo;
-		$_SESSION[$this->_config->obtener('sesion/rol')] = $this->_usuario->obtener($_SESSION[$this->_config->obtener('sesion/correo')])->USU_ROL;
+		$usuario = $this->_usuario->obtener($_SESSION[$this->_config->obtener('sesion/correo')]);
+		$_SESSION[$this->_config->obtener('sesion/rol')] = $usuario->USU_ROL;
+		$_SESSION[$this->_config->obtener('sesion/db')] = $usuario->USU_DB;
 	}
 }

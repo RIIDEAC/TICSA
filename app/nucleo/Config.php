@@ -17,13 +17,14 @@ class Config
                     ),
             'sesion' => 
                 array(
-                    'correo' => 'ADg6CaS',
+                    'correo' => 'ADg6CaSS',
                     'regular' => '3600',
                     'tiempo' => 'tiempo',
-                    'token' => 'LOGILOG',
+                    'token' => 'LOGILOGI',
                     'rol' => 'rol',
                     'realizado' => 'realizado',
-                    'error' => 'error'
+                    'error' => 'error',
+                    'db' => 'DBData',
                     ),
             'dir' => 
                 array(

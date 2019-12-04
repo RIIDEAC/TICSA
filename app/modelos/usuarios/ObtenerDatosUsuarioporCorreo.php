@@ -27,7 +27,7 @@ class ObtenerDatosUsuarioporCorreo
 				//'and' => array('', '', '')
 				), 
 			array(
-				'USU_ID','USU_CORREO','USU_ROL'
+				'USU_ID','USU_CORREO','USU_ROL','USU_DB'
 				)
 		);
 
