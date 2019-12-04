@@ -47,49 +47,49 @@ class ObtenerFormatosporNING_ID
 				'DAT_EINICIALI_EINI' => array(
 					'ID' => 'EINI_ID',
 					'NOMBRE' => 'Entrevista inicial - Datos generales',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL1',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/1',
 					'CAMPOS' => ['EINI_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALII_EINII' => array(
 					'ID' => 'EINII_ID',
 					'NOMBRE' => 'Entrevista inicial - Consumo de sustancias',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL2',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/2',
 					'CAMPOS' => ['EINII_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALIII_EINIII' => array(
 					'ID' => 'EINIII_ID',
 					'NOMBRE' => 'Entrevista inicial - Disposición al cambio',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL3',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/3',
 					'CAMPOS' => ['EINIII_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALIV_EINIV' => array(
 					'ID' => 'EINIV_ID',
 					'NOMBRE' => 'Entrevista inicial - Situación social - familiar',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL4',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/4',
 					'CAMPOS' => ['EINIV_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALV_EINV' => array(
 					'ID' => 'EINV_ID',
 					'NOMBRE' => 'Entrevista inicial - Administración del tiempo libre',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL5',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/5',
 					'CAMPOS' => ['EINV_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALVI_EINVI' => array(
 					'ID' => 'EINVI_ID',
 					'NOMBRE' => 'Entrevista inicial - Situación laboral',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL6',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/6',
 					'CAMPOS' => ['EINVI_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALVII_EINVII' => array(
 					'ID' => 'EINVII_ID',
 					'NOMBRE' => 'Entrevista inicial - Salud mental y física',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL7',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/7',
 					'CAMPOS' => ['EINVII_ID','FECHA_REGISTRO']
 				),
 				'DAT_EINICIALVIII_EINVIII' => array(
 					'ID' => 'EINVIII_ID',
 					'NOMBRE' => 'Entrevista inicial - Consecuencias adversas al consumo de sustancias',
-					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL8',
+					'CONTROLADOR' => 'VisualizarENTREVISTAINICIAL/8',
 					'CAMPOS' => ['EINVIII_ID','FECHA_REGISTRO']
 				),
 				'DAT_SATISFACCIONVIDA_SAT' => array(
