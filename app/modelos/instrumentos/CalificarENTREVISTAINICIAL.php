@@ -10,9 +10,5 @@ class CalificarENTREVISTAINICIAL
 	{
 		$this->_parte = $parte;
 		$this->_datosEntrevista = $array;
-
-		echo '<pre>';
-
-		print_r($array);
 	}
 }
