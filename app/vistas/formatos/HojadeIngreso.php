@@ -26,7 +26,7 @@
 					<td rowspan="2" style="text-align:center">
 					<h3><strong>Hoja de ingreso</strong></h3>
 					</td>
-					<td>Código:</td>
+					<td>Código: FA-01</td>
 				</tr>
 				<tr>
 					<td>Página: 1 de 1</td>

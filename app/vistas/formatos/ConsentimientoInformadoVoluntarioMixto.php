@@ -26,7 +26,7 @@
 					<td rowspan="2" style="text-align:center">
 					<h3><strong>Consentimiento Informado</strong></h3>
 					</td>
-					<td>Código:</td>
+					<td>Código:FA-02</td>
 				</tr>
 				<tr>
 					<td>Página: 1 de 2</td>
@@ -41,7 +41,7 @@
 <div style="text-align:justify">
 		<h3>Por parte del usuario:</h3>
 
-Por medio de la presente, yo <b><?php echo $datos->FORMATO->PAC_NOMBRE.' '.$datos->FORMATO->PAC_PATERNO.' '.$datos->FORMATO->PAC_MATERNO; ?></b> de sexo <?php echo $datos->FORMATO->SEX_MAY; ?> con <?php echo $datos->FORMATO->PAC_EDAD; ?> años de edad, declaro haber sido informado(a) que el establecimiento <b><?php echo $datos->CENTRO->CEN_NOMBRE; ?></b> ubicado en <b><?php echo $datos->CENTRO->CEN_CALLE. ' ' .$datos->CENTRO->CEN_NUMERO. ', ' .$datos->CENTRO->CEN_COLONIA. ', C.P. ' .$datos->CENTRO->CEN_CP. ' ' .$datos->CENTRO->CEN_CIUDAD. ', ' .$datos->CENTRO->CEN_ENTIDAD; ?></b>, ofrece un tratamiento residencial por un tiempo de <b>7 meses</b>, que tiene la finalidad de brindar atención para mi consumo de alcohol y/o drogas. Dicho tratamiento se basa en un modelo de tratamiento <b>MIXTO</b> cuyo objetivo consiste en lograr la abstinencia y la reinserción social. El programa está estructurado en 3 fases (INGRESO, PROGRESO Y EGRESO) con sus etapas y actividades complementarias.
+Por medio de la presente, yo <b><?php echo $datos->FORMATO->PAC_NOMBRE.' '.$datos->FORMATO->PAC_PATERNO.' '.$datos->FORMATO->PAC_MATERNO; ?></b> de sexo <?php echo $datos->FORMATO->SEX_MAY; ?> con <?php echo $datos->FORMATO->PAC_EDAD; ?> años de edad, declaro haber sido informado(a) que el establecimiento <b><?php echo $datos->CENTRO->CEN_NOMBRE; ?></b> ubicado en <b><?php echo $datos->CENTRO->CEN_CALLE. ' ' .$datos->CENTRO->CEN_NUMERO. ', ' .$datos->CENTRO->CEN_COLONIA. ', C.P. ' .$datos->CENTRO->CEN_CP. ' ' .$datos->CENTRO->CEN_CIUDAD. ', ' .$datos->CENTRO->CEN_ENTIDAD; ?></b>, ofrece un tratamiento residencial por un tiempo de <b><?php echo $datos->CENTRO->TRO_DURACION; ?></b>, que tiene la finalidad de brindar atención para mi consumo de alcohol y/o drogas. Dicho tratamiento se basa en un modelo de tratamiento <b>MIXTO</b> cuyo objetivo consiste en lograr la abstinencia y la reinserción social. El programa está estructurado en 3 fases (INGRESO, PROGRESO Y EGRESO) con sus etapas y actividades complementarias.
 <br>
 
 Estoy de acuerdo en participar activamente durante todo el proceso de tratamiento, lo que implica proporcionar información veraz y fidedigna al momento de las evaluaciones, realizar las actividades planificadas por el equipo de <?php echo $datos->CENTRO->CEN_NOMBRE; ?> Consejero, médico y/o psicólogo. Cumplir el reglamento interno, asistir a las sesiones de seguimiento una vez terminado el tratamiento, todo ello en beneficio de lograr mi abstinencia y facilitar mi reinserción social. Acepto de que en caso necesario y al no obtener los resultados esperados, se me proporcione información por escrito o verbal respecto a otro tipo de alternativas de atención. Tengo conocimiento de que la relación de mi persona con el personal del establecimiento, será únicamente profesional.
@@ -83,7 +83,7 @@ Ratifico que he sido informado respecto a las características del tratamiento, 
 			<td rowspan="2" style="text-align:center">
 			<h3><strong>Consentimiento Informado</strong></h3>
 			</td>
-			<td>Código:</td>
+			<td>Código: FA-02</td>
 		</tr>
 		<tr>
 			<td>Página: 2 de 2</td>
