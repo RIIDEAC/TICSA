@@ -9,7 +9,8 @@
 <table class="table table-striped" id="table" style="width:100%">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Exp</th>
+      <th scope="col">Tipo</th>
       <th scope="col">Apellido paterno</th>
       <th scope="col">Apellido materno</th>
       <th scope="col">Nombres</th>
@@ -25,7 +26,8 @@
   <tbody>
     <?php foreach ($datos as $key => $value) { ?>
     <tr>
-      <th scope="row"><?php echo $value->PAC_ID; ?></th>
+      <th scope="row"><?php echo $value->NING_ID; ?></th>
+      <td><?php echo $value->TII_MAY; ?></td>
       <td><?php echo $value->PAC_PATERNO; ?></td>
       <td><?php echo $value->PAC_MATERNO; ?></td>
       <td><?php echo $value->PAC_NOMBRE; ?></td>

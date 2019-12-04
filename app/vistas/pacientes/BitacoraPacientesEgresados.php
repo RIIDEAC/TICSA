@@ -24,7 +24,7 @@
   <tbody>
   	<?php foreach ($datos as $key => $value) { ?>
   	<tr>
-      <th scope="row"><?php echo $value->PAC_ID; ?></th>
+      <th scope="row"><?php echo $value->NING_ID; ?></th>
       <td><?php echo $value->PAC_PATERNO; ?> <?php echo $value->PAC_MATERNO; ?> <?php echo $value->PAC_NOMBRE; ?></td>
       <td><?php echo $value->SEX_MAY; ?></td>
       <td><?php echo $value->PAC_FNACIMIENTO; ?></td>
