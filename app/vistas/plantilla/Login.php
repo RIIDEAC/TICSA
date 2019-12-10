@@ -36,7 +36,7 @@
 
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="1" required> Acepto Términos y Condiciones
+          <input type="checkbox" value="1" required checked> Acepto Términos y Condiciones
         </label>
       </div>
       <input type="hidden" name="TOKEN" value="<?php echo $this->_token->generar(); ?>">

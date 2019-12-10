@@ -1,7 +1,7 @@
 	</main><!-- /.container -->
 	<footer class="footer">
       <div class="container">
-        <span class="text-muted">FOOTER</span>
+        <span class="text-muted"><strong>TICSA</strong> es una aplicación de <a href="<?php echo $this->_config->obtener('app/webauthor'); ?>" target="_blank"><?php echo $this->_config->obtener('app/webauthor'); ?></a></span>
       </div>
     </footer>
 <script>
