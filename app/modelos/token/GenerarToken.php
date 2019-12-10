@@ -13,6 +13,7 @@ class GenerarToken
 	public function generar()
 	{
 	    unset($_SESSION[$this->_config->obtener('sesion/token')]);
-		return $_SESSION[$this->_config->obtener('sesion/token')] = md5(time());
+	    $_SESSION[$this->_config->obtener('sesion/token')] = md5(time());
+	    return $_SESSION[$this->_config->obtener('sesion/token')];
 	}
 }

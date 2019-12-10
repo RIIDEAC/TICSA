@@ -8,10 +8,10 @@ class Config
         array(
     		'app' => 
                 array(
-                    'name' => 'RIIDE - TICSA',
+                    'name' => 'RIIDE - TICSA-NOM-028-SSA2-2009',
                     'author' => 'RIIDE AC',
                     'webauthor' => 'http://riide.org.mx/',
-                    'descripcion' => 'RIIDE-TICSA',
+                    'descripcion' => 'TICSA-NOM-028-SSA2-2009',
                     'webbase' => 'http://localhost/TICSA-NOM-028-SSA2-2009/',
                     'since' => '2015' 
                     ),

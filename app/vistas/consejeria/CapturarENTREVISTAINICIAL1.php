@@ -115,6 +115,10 @@
     <div class="form-group col-md-12">
       <label class="form-check-label">Personas con las que vive: </label>
       <div class="form-check form-check-inline">
+        <input class="form-check-input" name="VIVESOLO" type="checkbox" id="VIVESOLO" value="1" checked>
+        <label class="form-check-label" for="VIVESOLO">Sólo</label>
+      </div>
+      <div class="form-check form-check-inline">
         <input class="form-check-input" name="VIVEPAREJA" type="checkbox" id="VIVEPAREJA" value="1">
         <label class="form-check-label" for="VIVEPAREJA">Pareja</label>
       </div>
