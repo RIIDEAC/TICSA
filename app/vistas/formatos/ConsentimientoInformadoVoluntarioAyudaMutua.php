@@ -127,7 +127,7 @@ Siendo el <?php echo $datos->FORMATO->PAC_FINGRESO; ?>, en Tijuana, Baja Califor
 				<p><strong>Firma: __________________________</strong></p>
 			</td>
 			<td style="width:50%">
-				<p><strong><?php echo $datos->CENTRO->CEN_DIRECTOR; ?></strong><br />
+				<p><strong><?php echo strtoupper($datos->CENTRO->CEN_DIRECTOR); ?></strong><br />
 				<strong>DIRECTOR</strong></p>
 				<br>
 				<p><strong>Firma: __________________________</strong></p>

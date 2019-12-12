@@ -12,7 +12,12 @@ class RevisarToken
 
 	public function revisar($token = null)
 	{
-		if(isset($_SESSION[$this->_config->obtener('sesion/token')]) && $token === $_SESSION[$this->_config->obtener('sesion/token')])
+		if
+		(
+			isset($_SESSION[$this->_config->obtener('sesion/token')]) 
+			&& 
+			$token === $_SESSION[$this->_config->obtener('sesion/token')]
+		)
 		{
 			unset($_SESSION[$this->_config->obtener('sesion/token')]);
 			return true;
