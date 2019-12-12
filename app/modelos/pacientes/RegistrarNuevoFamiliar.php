@@ -50,6 +50,10 @@ class RegistrarNuevoFamiliar
 		if($this->verificarRepetido($data))
 		{
 			$data['USU_ID'] = $this->_usu->obtener($_SESSION[$this->_config->obtener('sesion/correo')])->USU_ID;
+			$data['FAM_NOMBRE'] = trim(strtoupper($data['FAM_NOMBRE']));
+			$data['FAM_PATERNO'] = trim(strtoupper($data['FAM_PATERNO']));
+			$data['FAM_MATERNO'] = trim(strtoupper($data['FAM_MATERNO']));
+
 			$data['FAM_ICURP'] = $this->_icurp->crear($data);
 
 			if($data['PAE_ID'] == '2')
