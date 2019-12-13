@@ -15,8 +15,12 @@ return array
 			'maximo' => 20,
 			'password' => 'USU_CORREO'
 		),
+	'g-recaptcha-response' =>
+		array(
+			'google' => true
+		),
 	'TOKEN' =>
 		array(
-			'tokenvalido' => true
+			'minimo' => 1
 		)		
 );

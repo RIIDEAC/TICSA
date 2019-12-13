@@ -25,6 +25,7 @@ class Validar
 					'existe',
 					'array',
 					'cambiarpassword',
+					'google',
 				],
 				$_items,
 				$_token,
@@ -51,6 +52,7 @@ class Validar
 					'existe' => 'Falta algun dato :field obligatorio',
 					'array' => 'Uno de los datos no se encuentra en el formato correcto',
 					'cambiarpassword' => 'La contraseña es incorrecta',
+					'google' => 'Eres un robot :)',
 				];
 
 	public function __construct
@@ -140,6 +142,35 @@ class Validar
 				}
 			}
 		}
+	}
+
+	protected function google($field, $value, $satisifer)
+	{
+		/*
+		ACTIVAR PARA VERIFICACION CON GOOGLE V2
+		$url = 'https://www.google.com/recaptcha/api/siteverify';
+		$data = array(
+			'secret' => 'YOUR_SECRET_KEY',
+			'response' => $value
+		);
+		$options = array(
+			'http' => array (
+				'method' => 'POST',
+				'content' => http_build_query($data)
+			)
+		);
+		$context  = stream_context_create($options);
+		$verify = file_get_contents($url, false, $context);
+		$captcha_success = json_decode($verify);
+		if ($captcha_success->success)
+		{
+			return true;
+		}
+
+		return false;
+		*/
+
+		return true;
 	}
 
 	protected function existe($field, $value, $satisifer)

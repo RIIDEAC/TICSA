@@ -6,6 +6,7 @@
     <meta name="description" content="<?php echo $this->_config->obtener('app/descripcion'); ?>">
     <meta name="author" content="<?php echo $this->_config->obtener('app/author'); ?>">
     <title><?php echo $this->_config->obtener('app/descripcion'); ?></title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom styles for this template -->
@@ -38,6 +39,9 @@
         <label>
           <input type="checkbox" value="1" required checked> Acepto Términos y Condiciones
         </label>
+      </div>
+      <div class="form-label-group">
+        <div class="g-recaptcha" data-sitekey="6LcGiMcUAAAAAEjfIXSOBONHCnZAAEomNWQHBigb"></div>
       </div>
       <input type="hidden" name="TOKEN" value="<?php echo $this->_token->generar(); ?>">
       <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
