@@ -26,19 +26,13 @@ class BuscarAdeudoPacientePorNING_ID
 		$this->_conPeriodico = $ObtenerConvenioPeriodicoPorNING_ID;
 	}
 
-	public function obtener(int $ning_id)
+	public function obtener($ning_id)
 	{
 		$this->_dias = $this->_dias->obtener($ning_id);
 		$this->_aportaciones = $this->_aportaciones->obtener($ning_id);
 		$this->_conIngreso = $this->_conIngreso->obtener($ning_id);
 		$this->_conPeriodico = $this->_conPeriodico->obtener($ning_id);
-		$this->adeudo($ning_id);
-	}
-
-	protected function adeudo($ning_id)
-	{
-		$this->periodica($ning_id);
-		$this->ingreso($ning_id);
+		return $this->periodica($ning_id);
 	}
 
 	protected function periodica($ning_id)
@@ -47,8 +41,6 @@ class BuscarAdeudoPacientePorNING_ID
 		{
 			if($this->_aportaciones)
 			{
-				//echo '<pre>';
-				//print_r($this->_aportaciones);
 				if($this->_conPeriodico->PER_ID == '1')
 				{
 					$periodoDias = 7;
@@ -129,24 +121,5 @@ class BuscarAdeudoPacientePorNING_ID
 		}
 
 		return false;
-	}
-
-	protected function ingreso($ning_id)
-	{
-		if($this->_conIngreso->BECA_ID == 2)
-		{
-			if($this->_aportaciones)
-			{
-				//CALCULAR APORTACIONES
-			}
-			else
-			{
-				//DEVOLVER TRUE EN CASO DE QUE NO HAYA APORTACIONES
-				return true;
-			}
-		}
-
-		//SIN ADEUDO
-		//return false;
 	}
 }

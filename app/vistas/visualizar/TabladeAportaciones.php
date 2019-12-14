@@ -8,6 +8,8 @@
                 <th>Tipo</th>
                 <th>Moneda</th>
                 <th>Cantidad</th>
+                <th>Tipo de cambio</th>
+                <th>Total en pesos</th>
             </tr>
         </thead>
         <tbody>
@@ -19,11 +21,17 @@
                 <td><?php echo $value->TIA_MIN; ?></td>
                 <td><?php echo $value->TIM_MIN; ?></td>
                 <td><?php echo $value->CANTIDAD; ?></td>
+                <td><?php echo $value->TIPO_CAMBIO; ?></td>
+                <td><?php 
+                if($value->TIM_ID == 2){ echo round($value->CANTIDAD * $value->TIPO_CAMBIO,2); }else{
+                    echo $value->CANTIDAD; } ?></td>
             </tr>
             <?php $x++; } ?>
         </tbody>
         <tfoot>
             <tr>
+                <th></th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -74,7 +82,7 @@
  
             // Total over all pages
             total = api
-                .column( 5 )
+                .column( 7 )
                 .data()
                 .reduce( function (a, b) {
                     return intVal(a) + intVal(b);
@@ -82,7 +90,7 @@
  
             // Total over this page
             pageTotal = api
-                .column( 5, { page: 'current'} )
+                .column( 7, { page: 'current'} )
                 .data()
                 .reduce( function (a, b) {
                     return intVal(a) + intVal(b);
@@ -90,7 +98,7 @@
  
             // Update DIV
 
-            $( api.column( 5 ).footer() ).html(
+            $( api.column( 7 ).footer() ).html(
                 '$'+pageTotal +' ( $'+ total +' total)'
             );
         }

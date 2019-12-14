@@ -29,10 +29,10 @@ class ControladorBALANCEAPORTACIONES
 		}
 
 		if($_POST['NING_ID'] !== '0' && is_numeric($_POST['NING_ID']))
-		{			
-			if($adeudo = $this->_adeudo->obtener($_POST['NING_ID']))
+		{		
+			if($this->_adeudo->obtener($_POST['NING_ID']))
 			{
-				$this->_vista->ver('aportaciones/AvisoAdeudo', $adeudo);
+				$this->_vista->ver('aportaciones/AvisoAdeudo');
 			}
 		}
 	}

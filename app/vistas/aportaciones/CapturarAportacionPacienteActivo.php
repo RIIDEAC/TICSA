@@ -9,8 +9,8 @@
             <div class="form-group col-md-12">
               <label for="NING_ID"><h3>Paciente</h3></label>
                 <select data-live-search="true" id="NING_ID" name="NING_ID" class="form-control" required>
+                  <option>Selecciona el paciente</option>
                   <?php foreach ($datos as $value) { ?>
-                    <option>Selecciona el paciente</option>
                     <option value="<?php echo $value->NING_ID; ?>">Exp. <?php echo $value->NING_ID; ?> <?php echo $value->PAC_PATERNO.' '.$value->PAC_MATERNO.' '.$value->PAC_NOMBRE; ?></option>
                   <?php } ?>
                 </select>
