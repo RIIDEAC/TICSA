@@ -44,14 +44,15 @@
             </div>
         	<div class="form-group col-md-12">
             	<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="TIM_ID" id="inlineRadio1" value="1" required>
+				  <input class="form-check-input" onchange="Dolar(this.value);" type="radio" name="TIM_ID" id="inlineRadio1" value="1" required>
 				  <label class="form-check-label" for="inlineRadio1">Pesos</label>
 				</div>
 				<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="TIM_ID" id="inlineRadio2" value="2" required>
+				  <input class="form-check-input" onchange="Dolar(this.value);" type="radio" name="TIM_ID" id="inlineRadio2" value="2" required>
 				  <label class="form-check-label" for="inlineRadio2">Doláres</label>
 				</div>
             </div>
+            <div id="TIPOCAMBIO"></div>
             </div>
             <div id="RESPUESTA" class="col-md-6">
             </div>
@@ -78,7 +79,7 @@ $('#NING_ID').change(function(){
         type: 'POST',
         success: function(response)
         {
-            var items = ['2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'];
+            var items = ['3','4','5','6','7','8','9','10','11','12','13','14','15','16'];
             if(response)
             {
                 $("#RESPUESTA").html(response);
@@ -104,4 +105,16 @@ $('#NING_ID').change(function(){
         }
     });
 })
+
+function Dolar(value)
+{
+    if(value == 2)
+    {
+        document.getElementById("TIPOCAMBIO").innerHTML = "<div class='form-group col-md-12'><label class='form-check-label' for='TIPO_CAMBIO'>Tipo de cambio (máximo 2 decimales)</label><div class='input-group mb-3'><div class='input-group-prepend'><span class='input-group-text'>$</span></div><input type='number' name='TIPO_CAMBIO' min='1' step='.01' value='18' class='form-control' aria-label='Cantidad' required></div></div>";
+    }
+    else
+    {
+        document.getElementById("TIPOCAMBIO").innerHTML = "";
+    }
+}
 </script>

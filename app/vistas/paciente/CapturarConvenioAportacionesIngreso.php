@@ -8,7 +8,7 @@
                   <label for="NING_ID"><h3>Paciente</h3></label>
                     <select data-live-search="true" id="NING_ID" name="NING_ID" class="form-control" required>
                       <?php foreach ($datos as $value) { ?>
-                        <option value="<?php echo $value->NING_ID; ?>"><?php echo $value->PAC_PATERNO.' '.$value->PAC_MATERNO.' '.$value->PAC_NOMBRE; ?></option>
+                        <option value="<?php echo $value->NING_ID; ?>">#<?php echo $value->NING_ID; ?> <?php echo $value->PAC_PATERNO.' '.$value->PAC_MATERNO.' '.$value->PAC_NOMBRE; ?></option>
                       <?php } ?>
                     </select>
                 </div>

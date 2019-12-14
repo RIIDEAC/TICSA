@@ -34,6 +34,11 @@ class RegistrarAportacionPaciente
 
 		$data['USU_ID'] = $this->_usu->obtener($_SESSION[$this->_config->obtener('sesion/correo')])->USU_ID;
 
+		if($data['TIM_ID'] == 2 && $data['TIPO_CAMBIO'] < 15)
+		{
+			$data['TIPO_CAMBIO'] = 18;
+		}
+
 		if($id = $this->_db->registrar($this->_config->obtener('dbnombres/aportacionpaciente'), $data))
 		{
 			$this->_log->log($this->_config->obtener('dbnombres/aportacionpaciente'),'REGISTRO APORTACION',$data['USU_ID']);

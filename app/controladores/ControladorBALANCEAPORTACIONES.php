@@ -28,11 +28,11 @@ class ControladorBALANCEAPORTACIONES
 			$this->_redirigir->a($this->_config->obtener('dir/salir'));
 		}
 
-		if($_POST['NING_ID'] !== '0')
-		{				
+		if($_POST['NING_ID'] !== '0' && is_numeric($_POST['NING_ID']))
+		{			
 			if($adeudo = $this->_adeudo->obtener($_POST['NING_ID']))
 			{
-				$this->_vista->ver('aportaciones/AvisoAdedudo', $adeudo);
+				$this->_vista->ver('aportaciones/AvisoAdeudo', $adeudo);
 			}
 		}
 	}
