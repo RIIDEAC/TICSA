@@ -35,13 +35,13 @@ class ObtenerAvanceEntrevistaConsejeria
 				{
 					if($value == 0)
 					{
-						$this->_vista->ver('consejeria/EntrevistaInicialParte'.$key);
+						$this->_vista->ver(array('consejeria/EntrevistaInicialParte'.$key));
 						die();
 					}
 
 				}
 
-				$this->_vista->ver('template/FormatoCompleto');
+				$this->_vista->ver(array('template/FormatoCompleto'));
 			}
 		}
 		else
