@@ -17,9 +17,9 @@ class DBCon
             $_dbProduccion = 
             	array(
                     'host' => '127.0.0.1',
-                    'dbname' => 'redii9y7_ticFVP',
-                    'dbuser' => 'redii9y7_ticFVP',
-                    'dbpass' => '8!5_C4jlq;Qt',
+                    'dbname' => 'XXXXXXX',
+                    'dbuser' => 'XXXXXXX',
+                    'dbpass' => 'XXXXXXX',
                     ); 
 
 	public function getCon($datos = null): pdo
