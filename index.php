@@ -7,7 +7,3 @@ date_default_timezone_set('America/Tijuana');
 require_once __DIR__ . '/vendor/autoload.php';
 $contenedor = new \app\modelos\contenedor\Contenedor;
 $app = $contenedor->get(App::class);
-//echo microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
-
-
-
