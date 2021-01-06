@@ -3,7 +3,7 @@
 </div>
 <div class="card mt-3">
     <div class="card-body">
-      <a href="<?php echo $this->_config->obtener('app/webbase'); ?>CapturarDatosEntrevistaInicialPsicologica" role="button" class="btn btn-outline-primary btn-lg">ENTREVISTA INICIAL</a>
-      <a href="<?php echo $this->_config->obtener('app/webbase'); ?>CapturarDatosNotaDeEvolucionPsicologica" role="button" class="btn btn-outline-primary btn-lg">NOTA DE EVOLUCIÓN INDIVIDUAL</a>
+      <a href="<?php echo $this->_config->obtener('app/webbase'); ?>CapturarDatosEntrevistaInicialPsicologica" role="button" class="btn btn-outline-primary btn-lg">Entrevista inicial</a>
+      <a href="<?php echo $this->_config->obtener('app/webbase'); ?>CapturarDatosNotaDeEvolucionPsicologica" role="button" class="btn btn-outline-primary btn-lg">Nota de evoluación individual</a>
   </div>
 </div>
